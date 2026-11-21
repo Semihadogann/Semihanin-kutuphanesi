@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semiha'nın Kütüphanesi</title>
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Özel CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">📚 Semiha'nın Kütüphanesi</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#hero">Ana Sayfa</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#kategoriler">Kategoriler</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#listem">Kitap Listem</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#oner">Kitap Öner</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. HERO ALANI -->
+    <section id="hero" class="hero-section text-center text-white d-flex align-items-center justify-content-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-3">Sayfalar Arasında Bir Yolculuk</h1>
+            <p class="lead">Okuduğum, okuyacağım ve bana ilham veren tüm kitapların kişisel dijital arşivi.</p>
+            <a href="#listem" class="btn btn-warning btn-lg mt-3 fw-bold">Kitap Listesine Göz At</a>
+        </div>
+    </section>
+
+    <!-- 3. ÜÇ KART (CARDS) -->
+    <section id="kategoriler" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4 text-dark fw-bold">Kitaplık Köşeleri</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 custom-card shadow-sm border-0">
+                        <div class="card-body text-center p-4">
+                            <div class="display-5 mb-3">⭐</div>
+                            <h5 class="card-title fw-bold">Favori Kitaplarım</h5>
+                            <p class="card-text text-muted">Bende derin izler bırakan, tekrar tekrar okuyabileceğim başucu eserlerim.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 custom-card shadow-sm border-0">
+                        <div class="card-body text-center p-4">
+                            <div class="display-5 mb-3">📖</div>
+                            <h5 class="card-title fw-bold">Şu An Okuduklarım</h5>
+                            <p class="card-text text-muted">Şu sıralar masamda açık duran, altını çizerek okuduğum güncel kitaplar.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 custom-card shadow-sm border-0">
+                        <div class="card-body text-center p-4">
+                            <div class="display-5 mb-3">📌</div>
+                            <h5 class="card-title fw-bold">Okuma Listem</h5>
+                            <p class="card-text text-muted">Yakın zamanda alıp kütüphaneye eklemeyi ve okumayı hedeflediğim eserler.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- OKUMA HEDEFİ PROGRESS BAR -->
+    <section class="py-4 bg-white">
+        <div class="container">
+            <div class="card border-0 shadow-sm p-4">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <h5 class="fw-bold mb-0">🎯 2026 Okuma Hedefim</h5>
+                    <span class="badge bg-success fs-6">14 / 20 Kitap (%70)</span>
+                </div>
+                <p class="text-muted small mb-3">Bu yıl kendime koyduğum 20 kitaplık okuma hedefimin güncel durumu:</p>
+                
+                <!-- İlerleme Çubuğu -->
+                <div class="progress" style="height: 25px;">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success fw-bold" 
+                         role="progressbar" 
+                         style="width: 70%;" 
+                         aria-valuenow="70" 
+                         aria-valuemin="0" 
+                         aria-valuemax="100">
+                        %70 Tamamlandı
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FAVORİ KİTAPLAR VİTRİNİ (CAROUSEL) -->
+    <section id="vitrin" class="py-5 bg-white">
+        <div class="container">
+            <h2 class="text-center mb-4 text-dark fw-bold">✨ Favori Kitaplar Vitrini</h2>
+            
+            <div id="favoriKitaplarCarousel" class="carousel slide shadow rounded overflow-hidden bg-dark text-white" data-bs-ride="carousel">
+                
+                <!-- Alt Gösterge Çizgileri -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#favoriKitaplarCarousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#favoriKitaplarCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#favoriKitaplarCarousel" data-bs-slide-to="2"></button>
+                </div>
+
+                <!-- Slayt İçerikleri -->
+                <div class="carousel-inner p-4 p-md-5">
+                    
+                    <!-- 1. Slayt: Puslu Kıtalar Atlası -->
+                    <div class="carousel-item active">
+                        <div class="row align-items-center justify-content-center">
+                            <div class="col-md-3 text-center mb-3 mb-md-0">
+                                <!-- Buraya kendi indirdiğin kapak görselinin yolunu yazabilirsin -->
+                                <img src="c:\Users\LENOVO\OneDrive\Masaüstü\Semiha'nın kütüphanesi\img\puslu-kitalar-scaled.jpg" class="img-fluid rounded shadow" alt="Puslu Kıtalar Atlası">
+                            </div>
+                            <div class="col-md-7">
+                                <span class="badge bg-warning text-dark mb-2">⭐ Başucu Eseri</span>
+                                <h3 class="fw-bold">Puslu Kıtalar Atlası</h3>
+                                <p class="text-warning mb-2">İhsan Oktay Anar</p>
+                                <p class="lead fst-italic">"Düşünüyorum, öyleyse varım; ama neyi düşünüyorum?"</p>
+                                <p class="small text-light">Osmanlı İstanbul'unun gizemli sokaklarında geçen, gerçek ile hayalin iç içe geçtiği unutulmaz bir başyapıt.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. Slayt: Gece Yarısı Kütüphanesi -->
+                    <div class="carousel-item">
+                        <div class="row align-items-center justify-content-center">
+                            <div class="col-md-3 text-center mb-3 mb-md-0">
+                                <img src="c:\Users\LENOVO\OneDrive\Masaüstü\Semiha'nın kütüphanesi\img\gece-yarisi-kütüphanesi.jpg" class="img-fluid rounded shadow" alt="Gece Yarısı Kütüphanesi">
+                            </div>
+                            <div class="col-md-7">
+                                <span class="badge bg-warning text-dark mb-2">⭐ En Çok Etkileyen</span>
+                                <h3 class="fw-bold">Gece Yarısı Kütüphanesi</h3>
+                                <p class="text-warning mb-2">Matt Haig</p>
+                                <p class="lead fst-italic">"Yaşam ile ölüm arasında bir kütüphane vardır ve bu kütüphanedeki raflar sonsuza dek uzanır."</p>
+                                <p class="small text-light">Pişmanlıklar ve alternatif hayatlar üzerine düşündüren, insana umut veren modern bir klasik.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. Slayt: Körlük -->
+                    <div class="carousel-item">
+                        <div class="row align-items-center justify-content-center">
+                            <div class="col-md-3 text-center mb-3 mb-md-0">
+                                <img src="c:\Users\LENOVO\OneDrive\Masaüstü\Semiha'nın kütüphanesi\img\körlük.jpg" class="img-fluid rounded shadow" alt="Körlük">
+                            </div>
+                            <div class="col-md-7">
+                                <span class="badge bg-warning text-dark mb-2">⭐ Sarsıcı Kurgu</span>
+                                <h3 class="fw-bold">Körlük</h3>
+                                <p class="text-warning mb-2">José Saramago</p>
+                                <p class="lead fst-italic">"Bence biz kör olmadık, biz zaten kördük; gören ama görmeyen körler."</p>
+                                <p class="small text-light">İnsan doğasının sınırlarını ve medeniyetin kırılganlığını çarpıcı bir dille anlatan distopya.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Sol / Sağ Geçiş Okları -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#favoriKitaplarCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#favoriKitaplarCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. TABLO (TABLE) -->
+    <section id="listem" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4 text-dark fw-bold">Okuma Takip Listesi</h2>
+            <div class="table-responsive shadow-sm rounded">
+                <table class="table table-striped table-hover align-middle mb-0">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>#</th>
+                            <th class="text-center">Köşe</th> <!-- YENİ EKLENEN SÜTUN -->
+                            <th>Kitap Adı</th>
+                            <th>Yazar</th>
+                            <th>Kategori</th>
+                            <th>Durum</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td class="text-center fs-5">📖</td>
+                            <td>Hayat İmkansız</td>
+                            <td>Matt Haig</td>
+                            <td>Çağdaş roman</td>
+                            <td><span class="badge bg-success">Okunuyor</span></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td class="text-center fs-5">📌</td>
+                            <td>Bu Defa Prenses Kendini Kurtarıyor</td>
+                            <td>Amanda Lovelace</td>
+                            <td>Modern Şiir</td>
+                            <td><span class="badge bg-warning text-dark">Okundu</span></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td class="text-center fs-5">⭐</td>
+                            <td>Puslu Kıtalar Atlası</td>
+                            <td>İhsan Oktay Anar</td>
+                            <td>Postmodern, fantastik ve tarihi roman</td>
+                            <td><span class="badge bg-warning text-dark">Okundu</span></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td class="text-center fs-5">📌</td>
+                            <td>Simyacı</td>
+                            <td>Paulo Coelho</td>
+                            <td>Büyülü gerçekçilik romanı</td>
+                            <td><span class="badge bg-warning text-dark">Okundu</span></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td class="text-center fs-5">⭐</td>
+                            <td>Bilinmeyen Bir Kadının Mektubu</td>
+                            <td>Stefan Zweig</td>
+                            <td>Dünya Klasikleri</td>
+                            <td><span class="badge bg-warning text-dark">Okundu</span></td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td class="text-center fs-5">📌</td>
+                            <td>Korku</td>
+                            <td>Stefan Zweig</td>
+                            <td>Dünya Klasikleri</td>
+                            <td><span class="badge bg-warning text-dark">Okundu</span></td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td class="text-center fs-5">📌</td>
+                            <td>Yakıcı Sır</td>
+                            <td>Stefan Zweig</td>
+                            <td>Dünya Klasikleri</td>
+                            <td><span class="badge bg-warning text-dark">Okundu</span></td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td class="text-center fs-5">📌</td>
+                            <td>Amok Koşucusu</td>
+                            <td>Stefan Zweig</td>
+                            <td>Dünya Klasikleri</td>
+                            <td><span class="badge bg-warning text-dark">Okundu</span></td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td class="text-center fs-5">📖</td>
+                            <td>Atomik Alışkanlıklar</td>
+                            <td>James Clear</td>
+                            <td>Kişisel gelişim ve psikoloji</td>
+                            <td><span class="badge bg-success">Okunuyor</span></td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td class="text-center fs-5">⭐</td>
+                            <td>Fesleğen</td>
+                            <td>Hikmet Anıl Öztekin</td>
+                            <td>Tasavvufi/manevi aşk romanı ve deneme</td>
+                            <td><span class="badge bg-warning text-dark">Okundu</span></td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td class="text-center fs-5">📌</td>
+                            <td>Ve Dağlar Yankılandı</td>
+                            <td>Khaled Hosseini</td>
+                            <td>Dram ve aile romanı</td>
+                            <td><span class="badge bg-secondary">Okunacak</span></td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td class="text-center fs-5">📌</td>
+                            <td>Gece Yarısı Kütüphanesi</td>
+                            <td>Matt Haig</td>
+                            <td>Fantastik, bilim kurgu ve felsefi kurgu romanı</td>
+                            <td><span class="badge bg-warning text-dark">Okundu</span></td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td class="text-center fs-5">📌</td>
+                            <td>İki Şehrin Hikayesi</td>
+                            <td>Charles Dickens</td>
+                            <td>Tarihi roman ve klasik edebiyat</td>
+                            <td><span class="badge bg-secondary">Okunacak</span></td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td class="text-center fs-5">📌</td>
+                            <td>Uğultulu Tepeler</td>
+                            <td>Emily Bronte</td>
+                            <td>Gotik romantizm ve klasik dram romanı</td>
+                            <td><span class="badge bg-warning text-dark">Okundu</span></td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td class="text-center fs-5">📌</td>
+                            <td>Körlük</td>
+                            <td>Jose Saramago</td>
+                            <td>Distopya, alegorik ve psikolojik dram romanı</td>
+                            <td><span class="badge bg-warning text-dark">Okundu</span></td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td class="text-center fs-5">📌</td>
+                            <td>Hamnet</td>
+                            <td>Maggie O'Farrell</td>
+                            <td>Tarihi kurgu ve biyografik roman</td>
+                            <td><span class="badge bg-secondary">Okunacak</span></td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td class="text-center fs-5">📌</td>
+                            <td>Fahrenheit 451</td>
+                            <td>Ray Bradbury</td>
+                            <td>Distopya ve bilim kurgu romanı</td>
+                            <td><span class="badge bg-warning text-dark">Okundu</span></td>
+                        </tr>
+                        <tr>
+                            <td>18</td>
+                            <td class="text-center fs-5">📌</td>
+                            <td>Doğu Ekspresinde Cinayet</td>
+                            <td>Agatha Christie</td>
+                            <td>Klasik dedektiflik ve polisiye romanı</td>
+                            <td><span class="badge bg-warning text-dark">Okundu</span></td>
+                        </tr>
+                        <tr>
+                            <td>19</td>
+                            <td class="text-center fs-5">📌</td>
+                            <td>On Kişiydiler</td>
+                            <td>Agatha Christie</td>
+                            <td>Polisiye ve gerilim romanı</td>
+                            <td><span class="badge bg-secondary">Okunacak</span></td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td class="text-center fs-5">📌</td>
+                            <td>Acı Kahve</td>
+                            <td>Agatha Christie</td>
+                            <td>Polisiye ve gizem</td>
+                            <td><span class="badge bg-warning text-dark">Okundu</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    <!-- ALINTILAR KÖŞESİ -->
+    <section id="alintilar" class="py-5 bg-white">
+        <div class="container">
+            <h2 class="text-center mb-4 text-dark fw-bold">Altını Çizdiklerim</h2>
+            <div class="row g-4">
+                
+                <!-- 1. Alıntı Kartı -->
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm bg-light">
+                        <div class="card-body p-4 d-flex flex-column justify-content-between">
+                            <div>
+                                <div class="fs-2 text-warning mb-2">❝</div>
+                                <p class="card-text fst-italic text-dark">
+                                    "İnsan bazen hiç gitmediği bir yerin, hiç yaşamadığı bir hayatın özlemini çekebilir."
+                                </p>
+                            </div>
+                            <div class="mt-3 pt-2 border-top">
+                                <h6 class="fw-bold mb-0">Gece Yarısı Kütüphanesi</h6>
+                                <small class="text-muted">Matt Haig</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Alıntı Kartı -->
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm bg-light">
+                        <div class="card-body p-4 d-flex flex-column justify-content-between">
+                            <div>
+                                <div class="fs-2 text-warning mb-2">❝</div>
+                                <p class="card-text fst-italic text-dark">
+                                    "Bir şeyi gerçekten istersen, bütün evren onu gerçekleştirmen için işbirliği yapar."
+                                </p>
+                            </div>
+                            <div class="mt-3 pt-2 border-top">
+                                <h6 class="fw-bold mb-0">Simyacı</h6>
+                                <small class="text-muted">Paulo Coelho</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Alıntı Kartı -->
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm bg-light">
+                        <div class="card-body p-4 d-flex flex-column justify-content-between">
+                            <div>
+                                <div class="fs-2 text-warning mb-2">❝</div>
+                                <p class="card-text fst-italic text-dark">
+                                    "Küçük alışkanlıklar zamanla birleşerek olağanüstü sonuçlar doğurur; onlar kişisel gelişimin bileşik faizidir."
+                                </p>
+                            </div>
+                            <div class="mt-3 pt-2 border-top">
+                                <h6 class="fw-bold mb-0">Atomik Alışkanlıklar</h6>
+                                <small class="text-muted">James Clear</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. FORM -->
+    <section id="oner" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4 text-dark fw-bold">Bana Kitap Öner</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <form class="p-4 border rounded shadow-sm bg-white">
+                        <div class="mb-3">
+                            <label for="name" class="form-label fw-bold">Adınız Soyadınız</label>
+                            <input type="text" class="form-control" id="name" placeholder="Adınızı giriniz" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">E-Posta Adresiniz</label>
+                            <input type="email" class="form-control" id="email" placeholder="ornek@email.com" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="book" class="form-label">Önerdiğiniz Kitap ve Yazar</label>
+                            <input type="text" class="form-control" id="book" placeholder="Örn: Şeker Portakalı - Jose Mauro de Vasconcelos" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Neden Öneriyorsunuz?</label>
+                            <textarea class="form-control" id="message" rows="3" placeholder="Kitap hakkındaki düşüncelerinizi yazabilirsiniz..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-dark w-100 fw-bold">Öneriyi Gönder</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. FOOTER -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p class="mb-1">"Bir kitap, içimizdeki donmuş denize indirilmiş bir baltadır."</p>
+            <small class="text-muted">© 2026 Semiha'nın Kütüphanesi. Tüm Hakları Saklıdır.</small>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
