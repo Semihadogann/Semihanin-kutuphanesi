@@ -1,0 +1,41 @@
+/* 1. CSS DEĞİŞKENLERİ (Variables) */
+:root {
+    --primary-color: #2c3e50;
+    --accent-color: #f39c12;
+    --hero-bg: #34495e;
+    --card-hover-bg: #f8f9fa;
+}
+
+/* Hero Alanı Özel Stili */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), var(--hero-bg);
+    min-height: 55vh;
+    padding: 80px 0;
+}
+
+/* 2. HOVER EFEKTİ (Kartlar Üzerine Gelindiğinde Yükselme ve Gölge) */
+.custom-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.custom-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15) !important;
+    background-color: var(--card-hover-bg);
+}
+
+/* 3. MEDIA QUERY (Mobil / Küçük Ekran Uyumluğu) */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero-section p {
+        font-size: 1rem;
+    }
+
+    section {
+        padding: 35px 0;
+    }
+}
